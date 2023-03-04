@@ -27,18 +27,18 @@ public class MainActivity4 extends AppCompatActivity {
 
 
         // Initializing a String Array
-        String[] plants = new String[]{
+        String[] robot = new String[]{
                 "Select a robot...",
                 "wally",
                 "bayola",
-                "Butterfly weed",
-                "Carrot weed"
+                "123",
+                "04032023"
         };
 
 
         // Convert array to a list
-        List<String> plantsList = new ArrayList<>
-                (Arrays.asList(plants));
+        List<String> robotList = new ArrayList<>
+                (Arrays.asList(robot));
 
 
         // Initializing an ArrayAdapter
@@ -46,7 +46,7 @@ public class MainActivity4 extends AppCompatActivity {
                 = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_dropdown_item_1line,
-                plantsList
+                robotList
         ){
             @Override
             public boolean isEnabled(int position){
