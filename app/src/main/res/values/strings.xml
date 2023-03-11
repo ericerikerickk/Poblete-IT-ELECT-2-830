@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">hello android</string>
+    <string-array name="planets_array">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+    </string-array>
+    <string name="HelloAndroid"/>
+
+    <string-array name="name_array">
+        <item>Beethoven</item>
+        <item>Mozart</item>
+        <item>Rachmaninoff</item>
+        <item>Chopin</item>
+        <item>Bach</item>
+        <item>Listz</item>
+        <item>Stravinsky</item>
+        <item>Debussy</item>
+    </string-array>
 </resources>
