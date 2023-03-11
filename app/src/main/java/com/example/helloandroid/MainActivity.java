@@ -18,5 +18,27 @@ public class MainActivity extends AppCompatActivity {
         // get the reference of button's
         firstFragment = (Button) findViewById(R.id.button);
         secondFragment = (Button) findViewById(R.id.button2);
+
+        //setOnClickListener event
+        firstFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new FragmentA());
+            }
+        });
+        //perform setOnClickListener
+        secondFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new FragmentB());
+            }
+        });
+    }
+    private void loadFragment(Fragment fragment)
+    {
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, fragment);
+        fragmentTransaction.commit();
     }
 }
