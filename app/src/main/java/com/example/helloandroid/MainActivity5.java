@@ -23,5 +23,13 @@ public class MainActivity5 extends AppCompatActivity {
         listitem = getResources().getStringArray(R.array.name_array);
         final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.my_list, R.id.textView, listitem);
         listview.setAdapter(adapter);
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                String value = adapter.getItem(position);
+                Toast.makeText(getApplicationContext(), value, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
