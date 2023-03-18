@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setSubtitle(" Design a custom Action Bar");
 
         // adding icon in the ActionBar
-        actionBar.setIcon(R.mipmap.ic_launcher);
+        actionBar.setIcon(R.mipmap.perro);
 
         // methods to display the icon in the ActionBar
         actionBar.setDisplayUseLogoEnabled(true);
