@@ -3,13 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
     tools:context=".DialogFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="269dp"
+        android:layout_height="405dp"
+        android:background="#03A9F4"
         android:text="@string/hello_blank_fragment" />
+
+    <LinearLayout
+        android:layout_width="288dp"
+        android:layout_height="438dp"
+        android:orientation="vertical"></LinearLayout>
 
 </FrameLayout>
