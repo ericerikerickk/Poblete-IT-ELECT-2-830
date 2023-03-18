@@ -1,19 +1,22 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link DialogFragment#newInstance} factory method to
  * create an instance of this fragment.
- *
  */
-public class DialogFragment extends Fragment {
-
+public class DialogFragment extends androidx.fragment.app.DialogFragment
+{
+    @Nullable
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -22,6 +25,10 @@ public class DialogFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    public DialogFragment() {
+        // Required empty public constructor
+    }
 
     /**
      * Use this factory method to create a new instance of
@@ -41,10 +48,6 @@ public class DialogFragment extends Fragment {
         return fragment;
     }
 
-    public DialogFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,9 +58,9 @@ public class DialogFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dialog, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle saveInstanceState)
+    {
+        super.onCreateView(inflater, container, saveInstanceState);
+        return inflater.inflate(R.layout.fragment_dialog,container, false);
     }
 }
