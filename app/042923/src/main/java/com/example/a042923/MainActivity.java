@@ -59,6 +59,16 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity", String.valueOf(age));
         Log.d("MainActivity", String.valueOf(isStudent));
 
+        editor.remove("name");
+        editor.apply();
+
+        name = prefs.getString("name", "");
+        age = prefs.getInt("age", 0);
+        isStudent = prefs.getBoolean("is_student", false);
+        Log.d("MainActivity", name);
+        Log.d("MainActivity", String.valueOf(age));
+        Log.d("MainActivity", String.valueOf(isStudent));
+
         //Clear shared preferences
         editor.clear();
         editor.commit();
